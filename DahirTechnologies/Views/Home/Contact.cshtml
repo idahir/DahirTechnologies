@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout-Internal.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <h2>Get in touch</h2>
+        <p>
+            For pricing or service inquiries please contact: Dahir Technologies
+        </p>
+    </div>
+    <div class="row" data-ng-controller="newMessageController">
+      
+        <div class="form-group">
+            <span class="span6">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" data-ng-model="newMsg.name"  />
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="span6">
+                <input type="text" name="email" class="form-control" placeholder="Your Email" data-ng-model="newMsg.email" />
+
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <textarea rows="8"  name="message" class="form-control" data-ng-model="newMsg.message"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox">
+                Confirm you are not spammer?
+            </label>
+        </div>
+        <div class="form-group">
+      
+            <a href="/"  class="btn btn-default">Cancel</a>
+            <input type="submit" class="btn" value="Save" data-ng-click="save()"/>
+       </div>
+    </div><!--row-->
+</div>
